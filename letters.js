@@ -5,14 +5,14 @@ const alphabet = {
     "offsety": 0
   },
   "A": {
-    "size": 40,
-    "offsetx": 0,
-    "offsety": 17
+    "size": 50,
+    "offsetx": 30,
+    "offsety": -40
   },
   "B": {
-    "size": 75,
-    "offsetx": 0,
-    "offsety": -70
+    "size": 100,
+    "offsetx": 8.399999999999999,
+    "offsety": 0
   },
   "C": {
     "size": 50,
@@ -20,9 +20,9 @@ const alphabet = {
     "offsety": 0
   },
   "D": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "size": 78,
+    "offsetx": -11.399999999999999,
+    "offsety": 10.000000000000014
   },
   "E": {
     "size": 50,
@@ -45,9 +45,9 @@ const alphabet = {
     "offsety": 0
   },
   "I": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "size": 0,
+    "offsetx": -2.3999999999999986,
+    "offsety": -100
   },
   "J": {
     "size": 50,
