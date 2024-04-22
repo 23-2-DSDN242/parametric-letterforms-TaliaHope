@@ -30,10 +30,10 @@ const letterC = {
   "offsety": 0
 }
 
-const backgroundColor  = "#acf2e7";
+const backgroundColor  = "#ffffff";
 
-const darkGreen  = "#26b29d";
-const lightGreen  = "#30dfc4";
+const darkPink  = "#ff66c4";
+const lightPink  = "#FFB2E2";
 const strokeColor  = "#0a2d27";
 
 function setup () {
@@ -69,11 +69,13 @@ function drawLetter(posx, posy, letterData) {
   let pos2x = posx + letterData["offsetx"];
   let pos2y = posy + letterData["offsety"];
 
+
+
   // draw two circles
-  fill(darkGreen);
-  ellipse(posx, posy, 150, 150);
-  fill(lightGreen);
-  ellipse(pos2x, pos2y, size2, size2);
+  fill(darkPink);
+  noStroke()
+  rect(posx, posy, 60, 150);
+
 }
 
 function keyTyped() {
