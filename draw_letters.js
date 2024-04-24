@@ -4,7 +4,7 @@ var systemLineColor = "#000090";
 var systemBoxColor = "#C73869";
 
 /* internal constants */
-const darkPink  = "#ff66c4";
+const darkPink  = "#FFF2C4"; // tape colour
 const lightPink  = "#FFB2E2";
 const strokeColor  = "#0a2d27";
 
@@ -25,12 +25,48 @@ function drawLetter(letterData) {
   let pos2x = 50  + letterData["offsetx"];
   let pos2y = 150 + letterData["offsety"];
 
-  // draw two circles
-  fill(darkPink); 
+ // drawing shapes here
+  fill(darkPink); // long line
   noStroke()
-  rect(50, 0, 60, 200);
-  fill(lightPink);
-  ellipse(pos2x, pos2y, size2, size2);
+  rect(0, 0, 35, 200);
+  fill(lightPink); // 2 long line
+  rect(60, 0, 35, 200);
+ 
+  fill(lightPink); // short line vert
+  rect(0, 0, 35, 80);
+  fill(darkPink); // 2 short line vert
+  rect(60, 120, 35, 80);
+  
+  fill(darkPink); // short line hori
+  rect(0, 0, 80, 35);
+  fill(lightPink); // 2 short line hori
+  rect(0, 50, 80, 35);
+  fill(lightPink); // 3 short line hori
+  rect(0, 120, 80, 35);
+
+
+  rotate(16);
+  fill(darkPink); // long line /
+  noStroke()
+  rect(0, 0, 35, 200);
+  rotate(328);
+  fill(lightPink); // 2 long line \
+  rect(60, 0, 35, 200);
+  
+  rotate(42);
+  fill(lightPink); // 1 short line ro \
+  rect(100, 80, 80, 35);
+  fill(darkPink); // 2 short line ro \
+  rect(100, 20, 80, 35);
+  fill(darkPink); // 3 short line ro \
+  rect(15, 0, 80, 35);
+
+  rotate(90);
+  fill(darkPink); // 1 short line ro /
+  rect(50, 0, 80, 35);
+  fill(darkPink); // 2 short line ro /
+  rect(50, -80, 80, 35);
+
 }
 
 function interpolate_letter(percent, oldObj, newObj) {
@@ -42,7 +78,7 @@ function interpolate_letter(percent, oldObj, newObj) {
 }
 
 var swapWords = [
-  "ABBAABBA",
-  "CAB?CAB?",
-  "BAAAAAAA"
+  "TAPETAPE",
+  "STICKYEW",
+  "ATTACHED"
 ]
