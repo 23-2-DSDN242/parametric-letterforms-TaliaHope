@@ -6,7 +6,13 @@ var systemBoxColor = "#C73869";
 /* internal constants */
 const darkPink  = "#FFF2C4"; // tape colour
 const lightPink  = "#FFB2E2";
+const color1 = "#A5D9FA";
+const color2 = "#8C52FF";
+const color3 = "#FF914D";
+const color4 = "#7B7979";
+const color5 = "#C1FF72";
 const strokeColor  = "#0a2d27";
+
 
 /*
  * Draw the letter given the letterData
@@ -16,56 +22,70 @@ const strokeColor  = "#0a2d27";
  * from (0,0) to (100, 200)
  */
 function drawLetter(letterData) {
+  push();
   // color/stroke setup
   stroke(strokeColor);
   strokeWeight(4);
 
+
+  // determine parameters for second circle
+  function drawLetter(letterData) {
+  push();
+  // color/stroke setup
+  stroke(strokeColor);
+  strokeWeight(0);
+  
   // determine parameters for second circle
   let size2 = letterData["size"];
-  let pos2x = 50  + letterData["offsetx"];
+  let pos2x = 50 + letterData["offsetx"];
   let pos2y = 150 + letterData["offsety"];
-
- // drawing shapes here
+  
+  // drawing shapes here
   fill(darkPink); // long line
-  noStroke()
-  rect(0, 0, 35, 200);
+  noStroke();
+  rect(pos2x, pos2y, 35, 200);
+  
   fill(lightPink); // 2 long line
   rect(60, 0, 35, 200);
+  }
+  
  
-  fill(lightPink); // short line vert
+  fill(color1); // short line vert
   rect(0, 0, 35, 80);
-  fill(darkPink); // 2 short line vert
+  fill(color1); // 2 short line vert
   rect(60, 120, 35, 80);
   
-  fill(darkPink); // short line hori
+  fill(color2); // short line hori
   rect(0, 0, 80, 35);
-  fill(lightPink); // 2 short line hori
+  fill(color2); // 2 short line hori
   rect(0, 50, 80, 35);
-  fill(lightPink); // 3 short line hori
+  fill(color2); // 3 short line hori
   rect(0, 120, 80, 35);
 
 
   rotate(16);
-  fill(darkPink); // long line /
-  noStroke()
+  fill(color3); // long line /
+  noStroke();
   rect(0, 0, 35, 200);
   rotate(328);
-  fill(lightPink); // 2 long line \
+  fill(color3); // 2 long line \
   rect(60, 0, 35, 200);
   
   rotate(42);
-  fill(lightPink); // 1 short line ro \
+  fill(color4); // 1 short line ro \
   rect(100, 80, 80, 35);
-  fill(darkPink); // 2 short line ro \
+  fill(color4); // 2 short line ro \
   rect(100, 20, 80, 35);
-  fill(darkPink); // 3 short line ro \
+  fill(color4); // 3 short line ro \
   rect(15, 0, 80, 35);
 
   rotate(90);
-  fill(darkPink); // 1 short line ro /
+  fill(color5); // 1 short line ro /
   rect(50, 0, 80, 35);
-  fill(darkPink); // 2 short line ro /
+  fill(color5); // 2 short line ro /
   rect(50, -80, 80, 35);
+
+  pop ();
 
 }
 
@@ -82,3 +102,4 @@ var swapWords = [
   "STICKYEW",
   "ATTACHED"
 ]
+
