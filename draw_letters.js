@@ -8,6 +8,7 @@ const darkPink = "#FFF2C4"; // Tape color
 const lightPink = "#FFB2E2";
 const color1 = "#A5D9FA";
 const color2 = "#A4422D";
+const color3 = "#32A42D";
 const strokeColor = "#0a2d27";
 
 /*
@@ -34,6 +35,10 @@ function drawLetter(letterData) {
   let pos6x = 50 + letterData["offsetx4"];
   let pos7y = 25 + letterData["offsety5"];
   let pos7x = 25 + letterData["offsetx5"];
+  let pos8y = 0 + letterData["offsety6"];
+  let pos8x = 0 + letterData["offsetx6"];
+  let pos9y = 0 + letterData["offsety7"];
+  let pos9x = 0 + letterData["offsetx7"];
    
   fill(color1); // long line
   noStroke();
@@ -44,21 +49,21 @@ function drawLetter(letterData) {
   rect(pos3x, 0, 30, 200);
 
   fill(lightPink);// short line hori
-  rect(pos4x, pos2y, 80, 30);
+  rect(pos4x, pos2y, 90, 30);
   fill(lightPink); // 2 short line hori
-  rect(pos5x, pos3y, 80, 30);
+  rect(pos5x, pos3y, 90, 30);
   fill(lightPink); // 3 short line hori
-  rect(pos6x, pos4y, 80, 30);
+  rect(pos6x, pos4y, 90, 30);
 
   fill(color2); // short line vert
-  rect(pos7x, pos7y, 30, 80);
-  //fill(color1); // 2 short line vert
-  //rect(60, 120, 35, 80);
+  rect(pos7x, pos7y, 30, 90);
+  fill(color2); // 2 short line vert
+  rect(pos8x, pos8y, 30, 90);
 
-  //rotate(16);
-  //fill(color3); // long line /
-  //noStroke();
-  //rect(0, 0, 35, 200);
+  rotate(16);
+  fill(color3); // long line /
+  noStroke();
+  rect(pos9x, pos9y, 30, 200);
   //rotate(328);
   //fill(color3); // 2 long line \
   //rect(60, 0, 35, 200);
