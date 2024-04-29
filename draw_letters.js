@@ -9,6 +9,7 @@ const lightPink = "#FFB2E2";
 const color1 = "#A5D9FA";
 const color2 = "#A4422D";
 const color3 = "#32A42D";
+const color4 = "#00A77A";
 const strokeColor = "#0a2d27";
 
 /*
@@ -39,6 +40,14 @@ function drawLetter(letterData) {
   let pos8x = 0 + letterData["offsetx6"];
   let pos9y = 0 + letterData["offsety7"];
   let pos9x = 0 + letterData["offsetx7"];
+  let pos10y = 20 + letterData["offsety8"];
+  let pos10x = 0 + letterData["offsetx8"];
+  let pos11y = 25 + letterData["offsety9"];
+  let pos11x = 45 + letterData["offsetx9"];
+  let pos12y = 30 + letterData["offsety10"];
+  let pos12x = 20 + letterData["offsetx10"];
+  let pos13y = 50 + letterData["offsety11"];
+  let pos13x = 40 + letterData["offsetx11"];
    
   fill(color1); // long line
   noStroke();
@@ -64,17 +73,17 @@ function drawLetter(letterData) {
   fill(color3); // long line /
   noStroke();
   rect(pos9x, pos9y, 30, 200);
-  //rotate(328);
-  //fill(color3); // 2 long line \
-  //rect(60, 0, 35, 200);
+  rotate(328);
+  fill(color3); // 2 long line \
+  rect(pos10x, pos10y, 30, 200);
   
-  //rotate(42);
-  //fill(color4); // 1 short line ro \
-  //rect(100, 80, 80, 35);
-  //fill(color4); // 2 short line ro \
- // rect(100, 20, 80, 35);
-  //fill(color4); // 3 short line ro \
-  //rect(15, 0, 80, 35);
+  rotate(56);
+  fill(color4); // 1 short line ro \
+  rect(pos11x, pos11y, 90, 30);
+  fill(color4); // 2 short line ro \
+  rect(pos12x, pos12y, 90, 30);
+  fill(color4); // 3 short line ro \
+  rect(pos13x, pos13y, 90, 30);
 
   //rotate(90);
   //fill(color5); // 1 short line ro /
