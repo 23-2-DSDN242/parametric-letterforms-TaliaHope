@@ -7,6 +7,7 @@ var systemBoxColor = "#C73869";
 const darkPink = "#FFF2C4"; // Tape color
 const lightPink = "#FFB2E2";
 const color1 = "#A5D9FA";
+const color2 = "#A4422D";
 const strokeColor = "#0a2d27";
 
 /*
@@ -31,6 +32,8 @@ function drawLetter(letterData) {
   let pos5x = 20 + letterData["offsetx3"];
   let pos4y = 80 + letterData["offsety4"];
   let pos6x = 50 + letterData["offsetx4"];
+  let pos7y = 25 + letterData["offsety5"];
+  let pos7x = 25 + letterData["offsetx5"];
    
   fill(color1); // long line
   noStroke();
@@ -41,46 +44,16 @@ function drawLetter(letterData) {
   rect(pos3x, 0, 30, 200);
 
   fill(lightPink);// short line hori
-  rect(pos4x, pos2y, 60, 30);
+  rect(pos4x, pos2y, 80, 30);
   fill(lightPink); // 2 short line hori
-  rect(pos5x, pos3y, 60, 30);
-  fill(lightPink); // 2 short line hori
-  rect(pos6x, pos4y, 60, 30);
+  rect(pos5x, pos3y, 80, 30);
+  fill(lightPink); // 3 short line hori
+  rect(pos6x, pos4y, 80, 30);
 
-}
-
-function interpolate_letter(percent, oldObj, newObj) {
-  let new_letter = {};
-  new_letter["size"] = map(percent, 0, 100, oldObj["size"], newObj["size"]);
-  new_letter["offsetx"] = map(percent, 0, 100, oldObj["offsetx"], newObj["offsetx"]);
-  new_letter["offsety"] = map(percent, 0, 100, oldObj["offsety"], newObj["offsety"]);
-  return new_letter;
-}
-
-var swapWords = [
-  "TAPETAPE",
-  "STICKYEW",
-  "ATTACHED"
-];
-
-
-
-
- 
-  
- 
-  //fill(color1); // short line vert
-  //rect(0, 0, 35, 80);
+  fill(color2); // short line vert
+  rect(pos7x, pos7y, 30, 80);
   //fill(color1); // 2 short line vert
   //rect(60, 120, 35, 80);
-  
-  //fill(color2); // short line hori
-  //rect(0, 0, 80, 35);
-  //fill(color2); // 2 short line hori
-  //rect(0, 50, 80, 35);
-  //fill(color2); // 3 short line hori
-  //rect(0, 120, 80, 35);
-
 
   //rotate(16);
   //fill(color3); // long line /
@@ -103,3 +76,26 @@ var swapWords = [
   //rect(50, 0, 80, 35);
   //fill(color5); // 2 short line ro /
   //rect(50, -80, 80, 35);
+}
+
+function interpolate_letter(percent, oldObj, newObj) {
+  let new_letter = {};
+  new_letter["size"] = map(percent, 0, 100, oldObj["size"], newObj["size"]);
+  new_letter["offsetx"] = map(percent, 0, 100, oldObj["offsetx"], newObj["offsetx"]);
+  new_letter["offsety"] = map(percent, 0, 100, oldObj["offsety"], newObj["offsety"]);
+  return new_letter;
+}
+
+var swapWords = [
+  "TAPETAPE",
+  "STICKYEW",
+  "ATTACHED"
+];
+
+
+
+
+ 
+  
+
+
