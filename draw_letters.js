@@ -1,18 +1,13 @@
-/* these are optional special variables which will change the system */
+/* These are optional special variables which will change the system */
 var systemBackgroundColor = "#ffffff";
 var systemLineColor = "#000090";
 var systemBoxColor = "#C73869";
 
-/* internal constants */
-const darkPink  = "#FFF2C4"; // tape colour
-const lightPink  = "#FFB2E2";
+/* Internal constants */
+const darkPink = "#FFF2C4"; // Tape color
+const lightPink = "#FFB2E2";
 const color1 = "#A5D9FA";
-const color2 = "#8C52FF";
-const color3 = "#FF914D";
-const color4 = "#7B7979";
-const color5 = "#C1FF72";
-const strokeColor  = "#0a2d27";
-
+const strokeColor = "#0a2d27";
 
 /*
  * Draw the letter given the letterData
@@ -23,75 +18,40 @@ const strokeColor  = "#0a2d27";
  */
 function drawLetter(letterData) {
   push();
-  // color/stroke setup
+  // Color/stroke setup
   stroke(strokeColor);
   strokeWeight(4);
 
-
-  // determine parameters for second circle
-  function drawLetter(letterData) {
-  push();
-  // color/stroke setup
-  stroke(strokeColor);
-  strokeWeight(0);
-  
-  // determine parameters for second circle
-  let size2 = letterData["size"];
-  let pos2x = 50 + letterData["offsetx"];
-  let pos2y = 150 + letterData["offsety"];
-  
-  // drawing shapes here
-  fill(darkPink); // long line
+  // Determine parameters 
+  let pos2x = -35 + letterData["offsetx"];
+  let pos3x = 35 + letterData["offsetx2"];
+  let pos2y = 0 + letterData["offsety"];
+  let pos4x = 0 + letterData["offsety2"];
+  let pos3y = 20 + letterData["offsety3"];
+  let pos5x = 20 + letterData["offsetx3"];
+  let pos4y = 80 + letterData["offsety4"];
+  let pos6x = 50 + letterData["offsetx4"];
+   
+  fill(color1); // long line
   noStroke();
-  rect(pos2x, pos2y, 35, 200);
-  
-  fill(lightPink); // 2 long line
-  rect(60, 0, 35, 200);
-  }
-  
- 
-  fill(color1); // short line vert
-  rect(0, 0, 35, 80);
-  fill(color1); // 2 short line vert
-  rect(60, 120, 35, 80);
-  
-  fill(color2); // short line hori
-  rect(0, 0, 80, 35);
-  fill(color2); // 2 short line hori
-  rect(0, 50, 80, 35);
-  fill(color2); // 3 short line hori
-  rect(0, 120, 80, 35);
+  rect(pos2x, 0, 30, 200);
 
-
-  rotate(16);
-  fill(color3); // long line /
+  fill(darkPink);  // 2 long line
   noStroke();
-  rect(0, 0, 35, 200);
-  rotate(328);
-  fill(color3); // 2 long line \
-  rect(60, 0, 35, 200);
-  
-  rotate(42);
-  fill(color4); // 1 short line ro \
-  rect(100, 80, 80, 35);
-  fill(color4); // 2 short line ro \
-  rect(100, 20, 80, 35);
-  fill(color4); // 3 short line ro \
-  rect(15, 0, 80, 35);
+  rect(pos3x, 0, 30, 200);
 
-  rotate(90);
-  fill(color5); // 1 short line ro /
-  rect(50, 0, 80, 35);
-  fill(color5); // 2 short line ro /
-  rect(50, -80, 80, 35);
-
-  pop ();
+  fill(lightPink);// short line hori
+  rect(pos4x, pos2y, 60, 30);
+  fill(lightPink); // 2 short line hori
+  rect(pos5x, pos3y, 60, 30);
+  fill(lightPink); // 2 short line hori
+  rect(pos6x, pos4y, 60, 30);
 
 }
 
 function interpolate_letter(percent, oldObj, newObj) {
   let new_letter = {};
-  new_letter["size"]    = map(percent, 0, 100, oldObj["size"], newObj["size"]);
+  new_letter["size"] = map(percent, 0, 100, oldObj["size"], newObj["size"]);
   new_letter["offsetx"] = map(percent, 0, 100, oldObj["offsetx"], newObj["offsetx"]);
   new_letter["offsety"] = map(percent, 0, 100, oldObj["offsety"], newObj["offsety"]);
   return new_letter;
@@ -101,5 +61,45 @@ var swapWords = [
   "TAPETAPE",
   "STICKYEW",
   "ATTACHED"
-]
+];
 
+
+
+
+ 
+  
+ 
+  //fill(color1); // short line vert
+  //rect(0, 0, 35, 80);
+  //fill(color1); // 2 short line vert
+  //rect(60, 120, 35, 80);
+  
+  //fill(color2); // short line hori
+  //rect(0, 0, 80, 35);
+  //fill(color2); // 2 short line hori
+  //rect(0, 50, 80, 35);
+  //fill(color2); // 3 short line hori
+  //rect(0, 120, 80, 35);
+
+
+  //rotate(16);
+  //fill(color3); // long line /
+  //noStroke();
+  //rect(0, 0, 35, 200);
+  //rotate(328);
+  //fill(color3); // 2 long line \
+  //rect(60, 0, 35, 200);
+  
+  //rotate(42);
+  //fill(color4); // 1 short line ro \
+  //rect(100, 80, 80, 35);
+  //fill(color4); // 2 short line ro \
+ // rect(100, 20, 80, 35);
+  //fill(color4); // 3 short line ro \
+  //rect(15, 0, 80, 35);
+
+  //rotate(90);
+  //fill(color5); // 1 short line ro /
+  //rect(50, 0, 80, 35);
+  //fill(color5); // 2 short line ro /
+  //rect(50, -80, 80, 35);
