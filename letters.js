@@ -1,4 +1,4 @@
-]const alphabet = {
+const alphabet = {
   "default": {
     "size": 40,
     "offsetx": 0,
@@ -84,8 +84,10 @@
   },
   "K": {
     "offsetx": 35,
-
-   
+    "offsety9": -25.599999999999994,
+    "offsetx9": 72.79999999999998,
+    "offsety12": 51.19999999999999,
+    "offsetx12": -96
  
   },
   "L": {
@@ -96,10 +98,19 @@
   },
   "M": {
     "offsetx": 35,
+    "offsetx2": 39.2,
+    "offsety11": -85.6,
+    "offsetx11": -28,
+    "offsety12": 56,
+    "offsetx12": -64
  
   },
   "N": {
-    "offsetx": 35,
+    "offsetx": 36.4,
+    "offsetx2": 37.800000000000004,
+    "offsety8": -8.799999999999997,
+    "offsetx8": 20,
+
 
   },
   "O": {
@@ -143,10 +154,15 @@
 
   },
   "T": {
-
+    "offsetx2": 0,
+    "offsety4": -80,
+    "offsetx4": -43.99999999999999,
   },
   "U": {
     "offsetx": 35,
+    "offsetx2": 37.800000000000004,
+    "offsety4": 92,
+    "offsetx4": -43.99999999999999,
 
   },
   "V": {
@@ -158,6 +174,11 @@
   },
   "W": {
     "offsetx": 35,
+  "offsetx2": 37.800000000000004,
+  "offsety11": -66.4,
+  "offsetx11": 84.80000000000001,
+  "offsety12": 75.19999999999999,
+  "offsetx12": -176
 
   },
   "X": {
@@ -169,7 +190,10 @@
 
   },
   "Y": {
-
+    "offsety7": -6.3999999999999915,
+    "offsetx7": 68,
+    "offsety11": -68.8,
+    "offsetx11": -23.200000000000003,
   },
   "Z": {
     "offsety4": 96,
@@ -192,22 +216,41 @@
 
   },
   "1": {
+    "offsetx2": 0,
 
   },
   "2": {
+    "offsety5": -25.599999999999994,
+    "offsetx5": -25.599999999999994,
+    "offsety4": 96,
+    "offsetx4": -38,
+    "offsety5": 39.19999999999999,
+    "offsetx5": 140,
+    "offsety7": -8.799999999999997,
+    "offsetx7": 53.599999999999994,
 
   },
   "3": {
 
   },
   "4": {
+    "offsetx2": 38.5,
+    "offsetx4": -40,
+    "offsety5": -25.599999999999994,
+    "offsetx5": -16,
 
   },
   "5": {
 
   },
   "6": {
-    "offsetx": 35,
+    "offsetx": 37.1,
+    "offsety3": 64,
+    "offsetx3": -12,
+    "offsety4": 90,
+    "offsetx4": -42.00000000000001,
+    "offsety5": 70.39999999999998,
+    "offsetx5": 46.400000000000006,
   },
   "7": {
     "size": 40,
@@ -215,9 +258,23 @@
     "offsety": 17
   },
   "8": {
-    "offsetx": 35,
+    "offsetx": 37.1,
+    "offsetx2": 39.2,
+    "offsety2": 2,
+    "offsety": 0,
+    "offsety3": 64,
+    "offsetx3": -12,
+    "offsety4": 92,
+    "offsetx4": -40,
   },
   "9": {
+    "offsetx2": 37.800000000000004,
+    "offsety2": 2,
+    "offsety": 0,
+    "offsety4": 4,
+    "offsetx4": -42.00000000000001,
+    "offsety5": -4,
+    "offsetx5": -23.200000000000003,
 
   }
 
