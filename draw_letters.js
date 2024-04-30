@@ -49,52 +49,62 @@ function drawLetter(letterData) {
   let pos12x = 20 + letterData["offsetx10"];
   let pos13y = 50 + letterData["offsety11"];
   let pos13x = 40 + letterData["offsetx11"];
- // let pos14y = 50 + letterData["offsety12"];
- // let pos14x = 40 + letterData["offsetx12"];
- // let pos15y = 20 + letterData["offsety13"];
-  //let pos15x = 80 + letterData["offsetx13"];
+  let pos14y = 0 + letterData["offsety12"];
+  let pos14x = 0 + letterData["offsetx12"];
+  let pos15y = 15 + letterData["offsety13"];
+  let pos15x = 10 + letterData["offsetx13"];
    
   fill(color1); // long line
   noStroke();
-  rect(pos2x, 0, 30, 200);
+  rect(pos2x, 0, 26, 198);
 
   fill(darkPink);  // 2 long line
   noStroke();
-  rect(pos3x, 0, 30, 200);
-
-  fill(lightPink);// short line hori
-  rect(pos4x, pos2y, 90, 30);
-  fill(lightPink); // 2 short line hori
-  rect(pos5x, pos3y, 90, 30);
-  fill(lightPink); // 3 short line hori
-  rect(pos6x, pos4y, 90, 30);
-
-  fill(color2); // short line vert
-  rect(pos7x, pos7y, 30, 90);
-  fill(color2); // 2 short line vert
-  rect(pos8x, pos8y, 30, 90);
-
-  rotate(16);
+  rect(pos3x, 0, 26, 198);
+  
+  push()
+  rotate(10);
   fill(color3); // long line /
   noStroke();
-  rect(pos9x, pos9y, 30, 200);
-  rotate(328);
+  rect(pos9x, pos9y, 26, 190);
+  push()
+  pop()
+  rotate(340);
   fill(color3); // 2 long line \
-  rect(pos10x, pos10y, 30, 200);
-  
-  rotate(56);
-  fill(color4); // 1 short line ro \
-  rect(pos11x, pos11y, 90, 30);
-  fill(color4); // 2 short line ro \
-  rect(pos12x, pos12y, 90, 30);
-  fill(color4); // 3 short line ro \
-  rect(pos13x, pos13y, 90, 30);
+  rect(pos10x, pos10y, 26, 190);
+  pop()
 
- // rotate(90);
- // fill(color5); // 1 short line ro /
- // rect(pos14x, pos14y, 80, 35);
- // fill(color5); // 2 short line ro /
-  //rect(pos15x, pos15y, 80, 35);
+
+  fill(lightPink);// short line hori
+  rect(pos4x, pos2y, 90, 26);
+  fill(lightPink); // 2 short line hori
+  rect(pos5x, pos3y, 90, 26);
+  fill(lightPink); // 3 short line hori
+  rect(pos6x, pos4y, 90, 26);
+
+
+  fill(color2); // short line vert
+  rect(pos7x, pos7y, 27, 89);
+  fill(color2); // 2 short line vert
+  rect(pos8x, pos8y, 27, 89);
+
+
+  push()
+  rotate(70);
+  fill(color4); // 1 short line ro \
+  rect(pos11x, pos11y, 85, 26);
+  fill(color4); // 2 short line ro \
+  rect(pos12x, pos12y, 85, 26);
+  fill(color4); // 3 short line ro \
+  rect(pos13x, pos13y, 85, 26);
+  pop()
+  push()
+  rotate(-70);
+  fill(color5); // 1 short line ro /
+  rect(pos14x, pos14y, 85, 26);
+  fill(color5); // 2 short line ro /
+  rect(pos15x, pos15y, 85, 26);
+  pop()
 }
 
 function interpolate_letter(percent, oldObj, newObj) {
