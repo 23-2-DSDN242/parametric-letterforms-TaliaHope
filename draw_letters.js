@@ -21,7 +21,8 @@ const strokeColor = "#0a2d27";
  * from (0,0) to (100, 200)
  */
 function drawLetter(letterData) {
-  push();
+  angleMode(DEGREES)
+  //push();
   // Color/stroke setup
   stroke(strokeColor);
   strokeWeight(4);
@@ -53,25 +54,34 @@ function drawLetter(letterData) {
   let pos14x = 0 + letterData["offsetx12"];
   let pos15y = 15 + letterData["offsety13"];
   let pos15x = 10 + letterData["offsetx13"];
-   
+    
   fill(color1); // long line
   noStroke();
+  if(pos2x > 1 ){
   rect(pos2x, 0, 26, 198);
-
+  }
+  if(pos3x < 40 ){
   fill(darkPink);  // 2 long line
   noStroke();
   rect(pos3x, 0, 26, 198);
-  
+  }
+
+
   push()
   rotate(10);
   fill(color3); // long line /
   noStroke();
+  if(pos9x, pos9y < 1 ){
   rect(pos9x, pos9y, 26, 190);
-  push()
+  }
   pop()
-  rotate(340);
+
+  push()
+  rotate(350);
   fill(color3); // 2 long line \
+  if(pos10x, pos10y < 69 ){
   rect(pos10x, pos10y, 26, 190);
+  }
   pop()
 
 
@@ -98,6 +108,7 @@ function drawLetter(letterData) {
   fill(color4); // 3 short line ro \
   rect(pos13x, pos13y, 85, 26);
   pop()
+
   push()
   rotate(-70);
   fill(color5); // 1 short line ro /
@@ -105,6 +116,8 @@ function drawLetter(letterData) {
   fill(color5); // 2 short line ro /
   rect(pos15x, pos15y, 85, 26);
   pop()
+
+ // pop()
 }
 
 function interpolate_letter(percent, oldObj, newObj) {
