@@ -4,14 +4,14 @@ var systemLineColor = "#000090";
 var systemBoxColor = "#C73869";
 
 /* Internal constants */
-const darkPink = "#FFF2C4"; // Tape color
-const lightPink = "#FFB2E2";
-const color1 = "#A5D9FA";
-const color2 = "#A4422D";
-const color3 = "#32A42D";
-const color4 = "#00A77A";
-const color5 = "#F5D12C";
-const strokeColor = "#0a2d27";
+const darkPink = [255, 242, 196, 127]; // Tape color
+const lightPink = [255, 242, 196, 127];
+const color1 = [255, 242, 196, 127];
+const color2 = [255, 242, 196, 127];
+const color3 = [255, 242, 196, 127];
+const color4 = [255, 242, 196, 127];
+const color5 = [255, 242, 196, 127];
+const strokeColor = [255, 242, 196, 127];
 
 /*
  * Draw the letter given the letterData
@@ -60,7 +60,7 @@ function drawLetter(letterData) {
   if(pos2x > 1 ){
   rect(pos2x, 0, 26, 198);
   }
-  if(pos3x < 40 ){
+  if(pos3x > 1 ){
   fill(darkPink);  // 2 long line
   noStroke();
   rect(pos3x, 0, 26, 198);
@@ -71,7 +71,7 @@ function drawLetter(letterData) {
   rotate(10);
   fill(color3); // long line /
   noStroke();
-  if(pos9x, pos9y < 1 ){
+  if(pos9x, pos9y > -13 ){
   rect(pos9x, pos9y, 26, 190);
   }
   pop()
@@ -79,42 +79,62 @@ function drawLetter(letterData) {
   push()
   rotate(350);
   fill(color3); // 2 long line \
-  if(pos10x, pos10y < 69 ){
+  if(pos10x, pos10y > 0 ){
   rect(pos10x, pos10y, 26, 190);
   }
   pop()
 
 
   fill(lightPink);// short line hori
+  if(pos4x, pos2y > -70 ){
   rect(pos4x, pos2y, 90, 26);
+  }
   fill(lightPink); // 2 short line hori
+  if(pos5x, pos3y > -70 ){
   rect(pos5x, pos3y, 90, 26);
+  }
   fill(lightPink); // 3 short line hori
+  if(pos6x, pos4y > -71 ){
   rect(pos6x, pos4y, 90, 26);
-
+  }
+    
 
   fill(color2); // short line vert
+  if(pos7x, pos7y > 0 ){
   rect(pos7x, pos7y, 27, 89);
+  }
   fill(color2); // 2 short line vert
+  if(pos8x, pos8y > 0 ){
   rect(pos8x, pos8y, 27, 89);
+  }
 
 
   push()
   rotate(70);
   fill(color4); // 1 short line ro \
+  if(pos11x, pos11y > 0 ){
   rect(pos11x, pos11y, 85, 26);
+  }
   fill(color4); // 2 short line ro \
+  if(pos12x, pos12y > -49 ){
   rect(pos12x, pos12y, 85, 26);
+  }
   fill(color4); // 3 short line ro \
+  if(pos13x, pos13y > -57 ){
   rect(pos13x, pos13y, 85, 26);
+  }
   pop()
 
   push()
   rotate(-70);
   fill(color5); // 1 short line ro /
+  if(pos14x, pos14y > 0 ){
   rect(pos14x, pos14y, 85, 26);
+  }
   fill(color5); // 2 short line ro /
+  if(pos15x, pos15y > 0 ){
   rect(pos15x, pos15y, 85, 26);
+  }
   pop()
 
  // pop()
@@ -133,11 +153,3 @@ var swapWords = [
   "STICKYEW",
   "ATTACHED"
 ];
-
-
-
-
- 
-  
-
-
