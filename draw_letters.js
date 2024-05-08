@@ -13,21 +13,11 @@ const color4 = [255, 222, 89, 127];
 const color5 = [255, 222, 89, 127];
 const strokeColor = [255, 222, 89, 127];
 
-/*
- * Draw the letter given the letterData
- *
- * Letters should always be drawn with the
- * following bounding box guideline:
- * from (0,0) to (100, 200)
- */
 function drawLetter(letterData) {
   angleMode(DEGREES)
-  //push();
-  // Color/stroke setup
   stroke(strokeColor);
   strokeWeight(4);
-
-  // Determine parameters 
+  
   let pos2x = -35 + letterData["offsetx"];
   let pos3x = 35 + letterData["offsetx2"];
   let pos2y = 0 + letterData["offsety"];
@@ -137,19 +127,50 @@ function drawLetter(letterData) {
   }
   pop()
 
- // pop()
+
 }
 
 function interpolate_letter(percent, oldObj, newObj) {
   let new_letter = {};
-  new_letter["size"] = map(percent, 0, 100, oldObj["size"], newObj["size"]);
+  let old_cirRot = oldObj["offsetx"];
+  let new_cirRot = newObj["offsetx"];
+  if (old_cirRot > new_cirRot) {
+    new_cirRot = new_cirRot + 360;
+  }
+  new_letter["offsetx"] = map(percent, 0, 100, old_cirRot, new_cirRot);
   new_letter["offsetx"] = map(percent, 0, 100, oldObj["offsetx"], newObj["offsetx"]);
+  new_letter["offsetx2"] = map(percent, 0, 100, oldObj["offsetx2"], newObj["offsetx2"]);
   new_letter["offsety"] = map(percent, 0, 100, oldObj["offsety"], newObj["offsety"]);
+  new_letter["offsety2"] = map(percent, 0, 100, oldObj["offsety2"], newObj["offsety2"]);
+  new_letter["offsety3"] = map(percent, 0, 100, oldObj["offsety3"], newObj["offsety3"]);
+  new_letter["offsetx3"] = map(percent, 0, 100, oldObj["offsetx3"], newObj["offsetx3"]);
+  new_letter["offsety4"] = map (percent, 0, 100, oldObj["offsety4"], newObj["offsety4"]);
+  new_letter["offsetx4"] = map(percent, 0, 100, oldObj["offsetx4"], newObj["offsetx4"]);
+  new_letter["offsety5"] = map(percent, 0, 100, oldObj["offsety5"], newObj["offsety5"]); 
+  new_letter["offsetx5"] = map(percent, 0, 100, oldObj["offsetx5"], newObj["offsetx5"]);
+  new_letter["offsety6"] = map(percent, 0, 100, oldObj["offsety6"], newObj["offsety6"]);
+  new_letter["offsetx6"] = map(percent, 0, 100, oldObj["offsetx6"], newObj["offsetx6"]);
+  new_letter["offsety7"] = map(percent, 0, 100, oldObj["offsety7"], newObj["offsety7"]);
+  new_letter["offsetx7"] = map(percent, 0, 100, oldObj["offsetx7"], newObj["offsetx7"]);
+  new_letter["offsety8"] = map(percent, 0, 100, oldObj["offsety8"], newObj["offsety8"]);
+  new_letter["offsetx8"] = map(percent, 0, 100, oldObj["offsetx8"], newObj["offsetx8"]);
+  new_letter["offsety9"] = map(percent, 0, 100, oldObj["offsety9"], newObj["offsety9"]);
+  new_letter["offsetx9"] = map(percent, 0, 100, oldObj["offsetx9"], newObj["offsetx9"]);
+  new_letter["offsety10"] = map(percent, 0, 100, oldObj["offsety10"], newObj["offsety10"]);
+  new_letter["offsetx10"] = map(percent, 0, 100, oldObj["offsetx10"], newObj["offsetx10"]);
+  new_letter["offsety11"] = map(percent, 0, 100, oldObj["offsety11"], newObj["offsety11"]);
+  new_letter["offsetx11"] = map(percent, 0, 100, oldObj["offsetx11"], newObj["offsetx11"]);
+  new_letter["offsety12"] = map(percent, 0, 100, oldObj["offsety12"], newObj["offsety12"]);
+  new_letter["offsetx12"] = map(percent, 0, 100, oldObj["offsetx12"], newObj["offsetx12"]);
+  new_letter["offsety13"] = map(percent, 0, 100, oldObj["offsety13"], newObj["offsety13"]);
+  new_letter["offsetx13"] = map(percent, 0, 100, oldObj["offsetx13"], newObj["offsetx13"]);
   return new_letter;
 }
 
 var swapWords = [
   "TAPETAPE",
   "STICKYEW",
-  "ATTACHED"
+  "ATTACHED",
+  "ADHESIVE",
+  "SUPERGLU"
 ];
