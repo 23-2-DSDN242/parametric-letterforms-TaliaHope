@@ -1,13 +1,28 @@
-/*******
- * define this "sliderInfo" variable
- * have an entry for each slider you want
- * and each row should be:
- * ["object_field", minimum_bound, maximum_bound]
- */
 const sliderInfo = [
-  ["size",       0, 100],
-  ["offsetx",  -30,  30],
-  ["offsety", -100, 100]
+  ["offsetx",  -70,  70],
+  ["offsetx2",  -70,  70],
+  ["offsety2", -200, 200],
+  ["offsety",  -200, 200],
+  ["offsety3", -200, 200],
+  ["offsetx3", -200, 200],
+  ["offsety4", -200, 200],
+  ["offsetx4", -200, 200],
+  ["offsety5", -200, 200],
+  ["offsetx5", -200, 200],
+  ["offsety6", -200, 200],
+  ["offsetx6", -200, 200],
+  ["offsety7", -200, 200],
+  ["offsetx7", -200, 200],
+  ["offsety8", -200, 200],
+  ["offsetx8", -200, 200],
+  ["offsety9", -200, 200],
+  ["offsetx9", -200, 200],
+  ["offsety10", -200, 200],
+  ["offsetx10", -200, 200],
+  ["offsety11", -200, 200],
+  ["offsetx11", -200, 200],
+  ["offsety12", -200, 200],
+  ["offsetx12", -200, 200],
 ];
 
 // PROBABLY DON'T NEED TO EDIT ANYTHING ELSE. STOP HERE.
