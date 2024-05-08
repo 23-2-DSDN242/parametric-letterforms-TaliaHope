@@ -287,8 +287,8 @@ const alphabet = {
   },
 
   "K": {
-    "offsetx": 36.400000000000006,
-    "offsetx2": -70,
+    "offsetx": -70,
+    "offsetx2": -28,
     "offsety2": -200,
     "offsety": -200,
     "offsety3": -200,
@@ -300,17 +300,17 @@ const alphabet = {
     "offsety6": -200,
     "offsetx6": -200,
     "offsety7": -200,
-    "offsetx7": -200,
+    "offsetx7": -196,
     "offsety8": -200,
-    "offsetx8": -200,
+    "offsetx8": -196,
     "offsety9": -200,
     "offsetx9": -200,
-    "offsety10": -200,
-    "offsetx10": -200,
-    "offsety11": -56,
-    "offsetx11": 80,
-    "offsety12": 56,
-    "offsetx12": -104
+    "offsety10": -48,
+    "offsetx10": 56,
+    "offsety11": -68,
+    "offsetx11": 88,
+    "offsety12": 44,
+    "offsetx12": -68
   },
   "L": {
     "offsetx": 36.400000000000006,
