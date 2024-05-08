@@ -1,17 +1,6 @@
 const canvasWidth = 960;
 const canvasHeight = 500;
 
-/*
- * my three variable per letter are:
- *
-   size: radius of the second circle (in pixels)
-   offsetx: x offset (in pixels) of the second circle
-            relative to the first one
-   offsety: y offset (in pixels) of the second circle
-            relative to the first one
- *
- */
-
 const letterA = {
   "offsetx": -70,
   "offsetx2": -70,
@@ -36,7 +25,9 @@ const letterA = {
   "offsety11": -200,
   "offsetx11": -200,
   "offsety12": -200,
-  "offsetx12": -200
+  "offsetx12": -200,
+  "start": 180,
+  "stop": 360
 }
 
 const letterB = {
@@ -63,7 +54,9 @@ const letterB = {
   "offsety11": -200,
   "offsetx11": -200,
   "offsety12": -200,
-  "offsetx12": -200
+  "offsetx12": -200,
+  "start": 270,
+  "stop": 360+90
 }
 
 const letterC = {
@@ -90,13 +83,14 @@ const letterC = {
   "offsety11": -200,
   "offsetx11": -200,
   "offsety12": -200,
-  "offsetx12": -200
+  "offsetx12": -200,
+  "start": 70,
+  "stop": 290
 }
 
 const backgroundColor  = "#ffffff";
+//const strokeColor      = "#03045e";
 
-
-/* Internal constants */
 const darkPink = [255, 222, 89, 127]; // Tape color
 const lightPink = [255, 222, 89, 127];
 const color1 = [255, 222, 89, 127];
@@ -113,7 +107,8 @@ function setup () {
 
   // color/stroke setup
   stroke(strokeColor);
-  strokeWeight(4);
+  // strokeWeight(4);
+  noStroke();
 
   // with no animation, redrawing the screen is not necessary
   noLoop();
@@ -125,7 +120,7 @@ function draw () {
 
   // compute the center of the canvas
   let center_x = canvasWidth / 2;
-  let center_y = canvasHeight / 1.6;
+  let center_y = canvasHeight / 2;
 
   // draw the letters A, B, C from saved data
   drawLetter(center_x - 250, center_y, letterA);
@@ -133,8 +128,11 @@ function draw () {
   drawLetter(center_x + 250, center_y, letterC);
 }
 
-function drawLetter(posx, posy, letterData) {
-  // determine parameters for second circle
+function drawLetter(letterData) {
+  angleMode(DEGREES)
+  stroke(strokeColor);
+  strokeWeight(4);
+  
   let pos2x = -35 + letterData["offsetx"];
   let pos3x = 35 + letterData["offsetx2"];
   let pos2y = 0 + letterData["offsety"];
@@ -243,6 +241,7 @@ function drawLetter(posx, posy, letterData) {
   rect(pos15x, pos15y, 85, 26);
   }
   pop()
+
 }
 
 function keyTyped() {
