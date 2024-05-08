@@ -13,100 +13,98 @@ const canvasHeight = 500;
  */
 
 const letterA = {
-  "offsetx": 0,
-  "offsetx2": 70,
-  "offsety2": -100,
-  "offsety": -100,
-  "offsety3": -100,
-  "offsetx3": -100,
-  "offsety4": 30,
+  "offsetx": -70,
+  "offsetx2": -70,
+  "offsety2": -200,
+  "offsety": -200,
+  "offsety3": -200,
+  "offsetx3": -200,
+  "offsety4": 27.9999999999997,
   "offsetx4": -48,
-  "offsety5": 140,
-  "offsetx5": 140,
-  "offsety6": -100,
-  "offsetx6": -100,
-  "offsety7": -1.6000000000000085,
-  "offsetx7": 36.79999999999998,
+  "offsety5": -200,
+  "offsetx5": -200,
+  "offsety6": -200,
+  "offsetx6": -200,
+  "offsety7": 0,
+  "offsetx7": 36,
   "offsety8": -4,
-  "offsetx8": 36.79999999999998,
-  "offsety9": 140,
-  "offsetx9": 140,
-  "offsety10": 140,
-  "offsetx10": 140,
-  "offsety11": 140,
-  "offsetx11": 140,
-  "offsety12": 140,
-  "offsetx12": 200
+  "offsetx8": 36,
+  "offsety9": -200,
+  "offsetx9": -200,
+  "offsety10": -200,
+  "offsetx10": -200,
+  "offsety11": -200,
+  "offsetx11": -200,
+  "offsety12": -200,
+  "offsetx12": -200
 }
 
 const letterB = {
-  "offsetx": 36.4,
-  "offsetx2": 70,
-  "offsety2": -100,
-  "offsety": -100,
-  "offsety3": 90,
-  "offsetx3": -18,
-  "offsety4": 92,
+  "offsetx": 36.400000000000006,
+  "offsetx2": -70,
+  "offsety2": 8,
+  "offsety": 172,
+  "offsety3": -200,
+  "offsetx3": -200,
+  "offsety4": 27.99999999999997,
   "offsetx4": -48,
-  "offsety5": -100,
-  "offsetx5": 140,
-  "offsety6": 108.80000000000001,
-  "offsetx6": 70.39999999999998,
-  "offsety7": 140,
-  "offsetx7": 140,
-  "offsety8": 140,
-  "offsetx8": 140,
-  "offsety9": 140,
-  "offsetx9": 140,
-  "offsety10": 140,
-  "offsetx10": 140,
-  "offsety11": 140,
-  "offsetx11": 140,
-  "offsety12": 140,
-  "offsetx12": 200
+  "offsety5": 84,
+  "offsetx5": 48,
+  "offsety6": -200,
+  "offsetx6": -200,
+  "offsety7": -200,
+  "offsetx7": -200,
+  "offsety8": -200,
+  "offsetx8": -200,
+  "offsety9": -200,
+  "offsetx9": -200,
+  "offsety10": -200,
+  "offsetx10": -200,
+  "offsety11": -200,
+  "offsetx11": -200,
+  "offsety12": -200,
+  "offsetx12": -200
 }
 
 const letterC = {
-  "offsetx": 36.4,
-  "offsetx2": 70,
-  "offsety2": -100,
-  "offsety": -100,
-  "offsety3": -20,
-  "offsetx3": -18,
-  "offsety4": 92,
-  "offsetx4": -48,
-  "offsety5": -100,
-  "offsetx5": 140,
-  "offsety6": 140,
-  "offsetx6": 140,
-  "offsety7": 140,
-  "offsetx7": 140,
-  "offsety8": 140,
-  "offsetx8": 140,
-  "offsety9": 140,
-  "offsetx9": 140,
-  "offsety10": 140,
-  "offsetx10": 140,
-  "offsety11": 140,
-  "offsetx11": 140,
-  "offsety12": 140,
-  "offsetx12": 200
+  "offsetx": 36.400000000000006,
+  "offsetx2": -70,
+  "offsety2": 8,
+  "offsety": 172,
+  "offsety3": -200,
+  "offsetx3": -200,
+  "offsety4": -80,
+  "offsetx4": -40,
+  "offsety5": -200,
+  "offsetx5": -200,
+  "offsety6": -200,
+  "offsetx6": -200,
+  "offsety7": -200,
+  "offsetx7": -200,
+  "offsety8": -200,
+  "offsetx8": -200,
+  "offsety9": -200,
+  "offsetx9": -200,
+  "offsety10": -200,
+  "offsetx10": -200,
+  "offsety11": -200,
+  "offsetx11": -200,
+  "offsety12": -200,
+  "offsetx12": -200
 }
-
-
 
 const backgroundColor  = "#ffffff";
 
 
 /* Internal constants */
-const darkPink = "#FFF2C4"; // Tape color
-const lightPink = "#FFB2E2";
-const color1 = "#A5D9FA";
-const color2 = "#A4422D";
-const color3 = "#32A42D";
-const color4 = "#00A77A";
-const color5 = "#F5D12C";
-const strokeColor = "#0a2d27";
+const darkPink = [255, 222, 89, 127]; // Tape color
+const lightPink = [255, 222, 89, 127];
+const color1 = [255, 222, 89, 127];
+const color2 = [255, 222, 89, 127];
+const color3 = [255, 222, 89, 127];
+const color4 = [255, 222, 89, 127];
+const color5 = [255, 222, 89, 127];
+const strokeColor = [255, 222, 89, 127];
 
 function setup () {
   // create the drawing canvas, save the canvas element
@@ -163,13 +161,13 @@ function drawLetter(posx, posy, letterData) {
   let pos14x = 0 + letterData["offsetx12"];
   let pos15y = 15 + letterData["offsety13"];
   let pos15x = 10 + letterData["offsetx13"];
-  
+    
   fill(color1); // long line
   noStroke();
   if(pos2x > 1 ){
   rect(pos2x, 0, 26, 198);
   }
-  if(pos3x < 40 ){
+  if(pos3x > 1 ){
   fill(darkPink);  // 2 long line
   noStroke();
   rect(pos3x, 0, 26, 198);
@@ -180,7 +178,7 @@ function drawLetter(posx, posy, letterData) {
   rotate(10);
   fill(color3); // long line /
   noStroke();
-  if(pos9x, pos9y < 1 ){
+  if(pos9x, pos9y > -13 ){
   rect(pos9x, pos9y, 26, 190);
   }
   pop()
@@ -188,42 +186,62 @@ function drawLetter(posx, posy, letterData) {
   push()
   rotate(350);
   fill(color3); // 2 long line \
-  if(pos10x, pos10y < 69 ){
+  if(pos10x, pos10y > 0 ){
   rect(pos10x, pos10y, 26, 190);
   }
   pop()
 
 
   fill(lightPink);// short line hori
+  if(pos4x, pos2y > -70 ){
   rect(pos4x, pos2y, 90, 26);
+  }
   fill(lightPink); // 2 short line hori
+  if(pos5x, pos3y > -70 ){
   rect(pos5x, pos3y, 90, 26);
+  }
   fill(lightPink); // 3 short line hori
+  if(pos6x, pos4y > -71 ){
   rect(pos6x, pos4y, 90, 26);
-
+  }
+    
 
   fill(color2); // short line vert
+  if(pos7x, pos7y > 0 ){
   rect(pos7x, pos7y, 27, 89);
+  }
   fill(color2); // 2 short line vert
+  if(pos8x, pos8y > 0 ){
   rect(pos8x, pos8y, 27, 89);
+  }
 
 
   push()
   rotate(70);
   fill(color4); // 1 short line ro \
+  if(pos11x, pos11y > 0 ){
   rect(pos11x, pos11y, 85, 26);
+  }
   fill(color4); // 2 short line ro \
+  if(pos12x, pos12y > -49 ){
   rect(pos12x, pos12y, 85, 26);
+  }
   fill(color4); // 3 short line ro \
+  if(pos13x, pos13y > -57 ){
   rect(pos13x, pos13y, 85, 26);
+  }
   pop()
 
   push()
   rotate(-70);
   fill(color5); // 1 short line ro /
+  if(pos14x, pos14y > 0 ){
   rect(pos14x, pos14y, 85, 26);
+  }
   fill(color5); // 2 short line ro /
+  if(pos15x, pos15y > 0 ){
   rect(pos15x, pos15y, 85, 26);
+  }
   pop()
 }
 
