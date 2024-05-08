@@ -4,14 +4,14 @@ var systemLineColor = "#000090";
 var systemBoxColor = "#C73869";
 
 /* Internal constants */
-const darkPink = [255, 242, 196, 127]; // Tape color
-const lightPink = [255, 242, 196, 127];
-const color1 = [255, 242, 196, 127];
-const color2 = [255, 242, 196, 127];
-const color3 = [255, 242, 196, 127];
-const color4 = [255, 242, 196, 127];
-const color5 = [255, 242, 196, 127];
-const strokeColor = [255, 242, 196, 127];
+const darkPink = [255, 222, 89, 127]; // Tape color
+const lightPink = [255, 222, 89, 127];
+const color1 = [255, 222, 89, 127];
+const color2 = [255, 222, 89, 127];
+const color3 = [255, 222, 89, 127];
+const color4 = [255, 222, 89, 127];
+const color5 = [255, 222, 89, 127];
+const strokeColor = [255, 222, 89, 127];
 
 /*
  * Draw the letter given the letterData
